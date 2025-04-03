@@ -1,0 +1,78 @@
+
+/* Custom animations and styles for the Truth Beacon website */
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Timeline styling */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, hsl(var(--primary)) 0%, rgba(139, 92, 246, 0.3) 100%);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: hsl(var(--primary));
+  border: 3px solid white;
+  z-index: 10;
+}
+
+/* Evidence card hover effect */
+.evidence-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evidence-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Countdown timer styling */
+.countdown-box {
+  background: radial-gradient(circle at center, #2d3748, #1a202c);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.countdown-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, hsl(var(--primary)), transparent);
+}
+
+.critical-text {
+  animation: criticalPulse 2s infinite alternate;
+}
+
+@keyframes criticalPulse {
+  from {
+    color: #e53e3e;
+  }
+  to {
+    color: #f56565;
+  }
+}

@@ -17,7 +17,8 @@ interface TimelineProps {
 const Timeline: React.FC<TimelineProps> = ({ events, className }) => {
   return (
     <div className={cn("relative pl-12", className)}>
-      <div className="timeline-line"></div>
+      {/* Timeline line */}
+      <div className="absolute top-0 left-4 w-1 h-full bg-gradient-to-b from-primary to-primary/30 rounded"></div>
       
       {events.map((event, index) => (
         <AnimatedSection 
@@ -25,13 +26,14 @@ const Timeline: React.FC<TimelineProps> = ({ events, className }) => {
           delay={index * 150} 
           className="mb-12 relative"
         >
-          <div className="timeline-dot" style={{ top: '6px' }}></div>
+          {/* Timeline dot */}
+          <div className="absolute -left-3 top-[6px] w-7 h-7 bg-white border-4 border-primary rounded-full z-10"></div>
           
           <div className="pl-6">
-            <span className="text-sm font-medium text-muted-foreground">
+            <span className="text-sm font-medium text-red-600 bg-red-50 px-2 py-1 rounded">
               {event.date}
             </span>
-            <h3 className="text-xl font-serif font-medium my-1">
+            <h3 className="text-xl font-serif font-medium my-2">
               {event.title}
             </h3>
             <p className="text-base text-gray-700">
