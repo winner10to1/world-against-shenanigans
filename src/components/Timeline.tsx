@@ -30,7 +30,7 @@ const Timeline: React.FC<TimelineProps> = ({ events, className }) => {
           <div className="absolute -left-3 top-[6px] w-7 h-7 bg-white border-4 border-primary rounded-full z-10"></div>
           
           <div className="pl-6">
-            <span className="text-sm font-medium text-red-600 bg-red-50 px-2 py-1 rounded">
+            <span className="text-sm font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">
               {event.date}
             </span>
             <h3 className="text-xl font-serif font-medium my-2">
