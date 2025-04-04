@@ -62,7 +62,7 @@ const Footer = () => {
           <div>
             <h4 className="text-base font-semibold mb-4">About</h4>
             <p className="text-muted-foreground mb-4">
-              This project aims to provide factual information about controversial actions by public figures. All information is sourced from reputable publications and includes references.
+              This project aims to provide factual information about controversial actions by public figures. All information is sourced from reputable publications and includes references. For Domain Selling queries, please email ogomondd@gmail.com
             </p>
             <p className="text-muted-foreground text-sm">
               &copy; {year} World Against. All rights reserved.

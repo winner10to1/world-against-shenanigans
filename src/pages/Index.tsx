@@ -150,7 +150,7 @@ const Index = () => {
                   description: "Charged with numerous felonies related to election interference and document mishandling."
                 },
                 {
-                  date: "2024",
+                  date: "2025",
                   title: "90-Day Critical Window Begins",
                   description: "The beginning of our 90-day countdown to prevent catastrophic government overreach."
                 }
