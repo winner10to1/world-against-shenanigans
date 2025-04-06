@@ -1,6 +1,8 @@
 
 import { useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
+import LogoText from './LogoText';
+import { MapIcon } from 'lucide-react';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,11 +38,11 @@ const Navbar = () => {
       )}
     >
       <div className="container max-w-7xl mx-auto px-4 flex justify-between items-center">
-        <div 
-          className="text-xl md:text-2xl font-serif tracking-tight cursor-pointer transition-opacity duration-200 hover:opacity-80"
+        <div
+          className="tracking-tight cursor-pointer transition-opacity duration-200 hover:opacity-80"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <span className="font-semibold text-primary">World</span> Against
+          <LogoText />
         </div>
         
         <nav className="hidden md:flex space-x-6">
@@ -67,6 +69,13 @@ const Navbar = () => {
             className="text-sm font-medium hover:text-primary transition-colors duration-200"
           >
             Timeline
+          </button>
+          <button
+            onClick={() => scrollToSection('global-impact')}
+            className="text-sm font-medium hover:text-primary transition-colors duration-200 flex items-center gap-1"
+          >
+            <MapIcon className="h-4 w-4" />
+            Impact Map
           </button>
         </nav>
         

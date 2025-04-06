@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AnimatedSection from './AnimatedSection';
 import { cn } from "@/lib/utils";
@@ -14,13 +13,40 @@ interface TimelineProps {
   className?: string;
 }
 
+const newEvents = [
+  {
+    date: "April 2025",
+    title: "Universal Tariffs Implemented",
+    description: "Trump's 10% universal tariff takes effect, causing economic disruptions and retaliatory measures from key trading partners."
+  },
+  {
+    date: "April 2025",
+    title: "Nationwide Protests",
+    description: "Large-scale 'Hands Off' protests erupt across the U.S., opposing Trump's policies and tariffs."
+  },
+  {
+    date: "April 2025",
+    title: "Meeting with Netanyahu",
+    description: "Trump meets with Israeli Prime Minister Netanyahu amidst ongoing geopolitical tensions."
+  },
+  {
+    date: "April 2025",
+    title: "Global Tensions Rise",
+    description: "Experts warn that escalating trade wars and geopolitical conflicts could lead to broader global instability."
+  }
+];
+
 const Timeline: React.FC<TimelineProps> = ({ events, className }) => {
+  const updatedEvents = [...events, ...newEvents].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <div className={cn("relative pl-12", className)}>
       {/* Timeline line */}
       <div className="absolute top-0 left-4 w-1 h-full bg-gradient-to-b from-primary to-primary/30 rounded"></div>
       
-      {events.map((event, index) => (
+      {updatedEvents.map((event, index) => (
         <AnimatedSection 
           key={index} 
           delay={index * 150} 

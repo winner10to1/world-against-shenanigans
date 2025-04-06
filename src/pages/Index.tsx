@@ -174,8 +174,8 @@ const Index = () => {
                 placeholder="Your email address" 
                 className="px-4 py-3 rounded-md text-black w-full"
               />
-              <Button className="px-6 py-3 bg-white hover:bg-gray-100 text-primary font-medium whitespace-nowrap">
-                Subscribe
+              <Button className="px-6 py-3 bg-white hover:bg-gray-100 text-primary font-medium whitespace-nowrap" disabled>
+                Subscribe (Coming Soon)
               </Button>
             </div>
           </AnimatedSection>
