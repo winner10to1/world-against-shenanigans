@@ -26,26 +26,10 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li>
                 <a 
-                  href="#politics" 
+                  href="#evidence-repository" 
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
-                  Politics
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#business" 
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  Business
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#social" 
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  Social Impact
+                  Evidence Repository
                 </a>
               </li>
               <li>
@@ -56,6 +40,14 @@ const Footer: React.FC = () => {
                   Timeline
                 </a>
               </li>
+              <li>
+                <a 
+                  href="#global-impact" 
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                >
+                  Impact Map
+                </a>
+              </li>
             </ul>
           </div>
           
@@ -64,9 +56,9 @@ const Footer: React.FC = () => {
             <p className="text-muted-foreground mb-4">
               This project aims to provide factual information about controversial actions by public figures. All information is sourced from reputable publications and includes references.
             </p>
-            <span className="block text-muted-foreground text-sm">
+            <p className="text-muted-foreground text-sm">
               &copy; {year} <LogoText size="sm" className="inline-block mx-1" />. All rights reserved.
-            </span>
+            </p>
           </div>
         </div>
       </div>

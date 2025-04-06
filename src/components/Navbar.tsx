@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
 import LogoText from './LogoText';
@@ -47,22 +46,10 @@ const Navbar = () => {
         
         <nav className="hidden md:flex space-x-6">
           <button 
-            onClick={() => scrollToSection('politics')}
+            onClick={() => scrollToSection('evidence-repository')}
             className="text-sm font-medium hover:text-primary transition-colors duration-200"
           >
-            Politics
-          </button>
-          <button 
-            onClick={() => scrollToSection('business')}
-            className="text-sm font-medium hover:text-primary transition-colors duration-200"
-          >
-            Business
-          </button>
-          <button 
-            onClick={() => scrollToSection('social')}
-            className="text-sm font-medium hover:text-primary transition-colors duration-200"
-          >
-            Social Impact
+            Evidence Repository
           </button>
           <button 
             onClick={() => scrollToSection('timeline')}

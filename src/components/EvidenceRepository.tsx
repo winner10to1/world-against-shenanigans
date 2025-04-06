@@ -729,50 +729,52 @@ const EvidenceRepository: React.FC = () => {
   };
 
   return (
-    <div className="w-full">
-      <div className="relative max-w-xl mx-auto mb-8">
-        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <Search className="h-5 w-5 text-gray-400" />
+    <section id="evidence-repository" className="py-20">
+      <div className="w-full">
+        <div className="relative max-w-xl mx-auto mb-8">
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <Search className="h-5 w-5 text-gray-400" />
+          </div>
+          <Input
+            type="text"
+            placeholder="Search evidence..."
+            className="pl-10"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
         </div>
-        <Input
-          type="text"
-          placeholder="Search evidence..."
-          className="pl-10"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-      </div>
-      
-      <Tabs defaultValue="all" className="w-full">
-        <TabsList className="grid grid-cols-7 max-w-4xm mx-auto mb-8">
-          {categories.map(category => (
-            <TabsTrigger key={category.id} value={category.id}>
-              {category.label}
-            </TabsTrigger>
-          ))}
-        </TabsList>
         
-        {categories.map(category => (
-          <TabsContent key={category.id} value={category.id}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filterEvidence(category.items, searchQuery).map((evidence, index) => (
-                <AnimatedSection key={evidence.id} delay={index * 100}>
-                  <FactCard
-                    title={evidence.title}
-                    description={evidence.description}
-                    date={evidence.date}
-                    category={evidence.category}
-                    verification={evidence.verification}
-                  />
-                </AnimatedSection>
-              ))}
-            </div>
-          </TabsContent>
-        ))}
-      </Tabs>
+        <Tabs defaultValue="all" className="w-full">
+        <TabsList className="grid grid-cols-7 max-w-4xm mx-auto mb-8">
+            {categories.map(category => (
+              <TabsTrigger key={category.id} value={category.id}>
+                {category.label}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          
+          {categories.map(category => (
+            <TabsContent key={category.id} value={category.id}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filterEvidence(category.items, searchQuery).map((evidence, index) => (
+                  <AnimatedSection key={evidence.id} delay={index * 100}>
+                    <FactCard
+                      title={evidence.title}
+                      description={evidence.description}
+                      date={evidence.date}
+                      category={evidence.category}
+                      verification={evidence.verification}
+                    />
+                  </AnimatedSection>
+                ))}
+              </div>
+            </TabsContent>
+          ))}
+        </Tabs>
 
-      <GlobalImpactMap />
-    </div>
+        <GlobalImpactMap />
+      </div>
+    </section>
   );
 };
 
