@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
           This page needs contributors to add more important information. For design changes or to include additional information, please contact the email provided in the repository.
         </p>
         <p className="text-sm mt-2">
-          While the owner of this website sympathizes with this cause, they have other important goals. The owner is open to selling this domain to someone who wishes to continue this mission. Please email ogomondd@gmail.com for more info, as the owner feels their job is already done by making this effort in the first place.
+          While the owner of this website sympathizes with this cause, unfortunately they have other important goals. The owner is open to selling this domain to someone who wishes to continue this mission. Please email gutierrezhernandro@gmail.com for more info, as the owner feels their job is already done by making this effort in the first place.
           Please also note that the owner is not an expert journalist, and the news articles linked made sense to the best of the owner's knowledge. But it should more or less be accurate as it is in line with the struggle the world is facing now.
           The owner is not responsible for any misinformation or misinterpretation of the articles linked. The owner is not a lawyer and does not have any legal training, so please do not take this as legal advice. 
           The owner is not responsible for any legal issues that may arise from the use of this website. 
