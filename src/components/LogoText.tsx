@@ -14,10 +14,10 @@ const LogoText: React.FC<LogoTextProps> = ({ className, size = 'md' }) => {
   };
 
   return (
-    <div className={cn("inline-flex items-center", className)}>
+    <span className={cn("inline-flex items-center", className)}>
       <span className="font-semibold text-primary">World</span>
       <span className="mx-2">Against</span>
-      <div className={cn(
+      <span className={cn(
         "inline-flex items-center justify-center",
         "bg-white rounded-full",
         "border-[10px] border-red-600",
@@ -30,8 +30,8 @@ const LogoText: React.FC<LogoTextProps> = ({ className, size = 'md' }) => {
         )}>
           Trump
         </span>
-      </div>
-    </div>
+      </span>
+    </span>
   );
 };
 
